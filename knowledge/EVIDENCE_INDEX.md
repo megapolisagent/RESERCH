@@ -212,9 +212,39 @@ Brief from Engineer (second direct question, same day as Batch ORCH), re: a 4-la
 | OpenTelemetry GenAI semantic conventions (moved page + targeted WebSearch) | One direct fetch (generic confirmation only) + one targeted WebSearch for span/attribute names | Official spec (partially reached) | Medium |
 | LangSmith trace API (`docs.langchain.com/langsmith/trace-with-api`) | WebSearch-aggregated only | Official docs (search-corroborated) | Medium |
 
+## Batch MAINENG (2026-08-13) — verification of three mechanisms from old MAIN_ENGINEER (predecessor repo)
+
+Brief from Engineer, relayed via `ENGINEER/OPEN_QUESTIONS.md`, 2026-08-13 entry. Full source-level detail and per-mechanism verdicts: `knowledge/evidence/2026-08-13-main-engineer-mechanisms-verification.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — instruction-file governance mechanisms checked against old MAIN_ENGINEER" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| `megapolisagent/MAIN_ENGINEER` — `MAIN_ENGINEER_CORE.md`, `AGENT_PROTOCOL.md`, `OBSIDIAN_PROTOCOL.md`, `ai_engineering_operating_system_master.md`, `SKILLS_REGISTRY.md`, `Claude.md` | Full text, fetched directly this session (`raw.githubusercontent.com`) | Primary artifact (predecessor repo) | High |
+| `.../ENGINEERING_LOG/external_review_MAIN_ASSISTANT_v1.7.1_2026-06-16.md`, `.../v1.7.3_2026-06-19.md`, `.../v1.7.4_2026-06-19.md` | Full text, fetched directly | Primary artifact (real exercised instances of the mechanism) | High |
+| `anthropics/skills` `README.md` + `platform.claude.com/.../agent-skills/best-practices` | Full text, fetched directly | Official docs | High |
+| Arthur.ai, Latitude.so, Agenta, aiquinta, tianpan.co — prompt/agent-config SemVer practice | WebSearch-aggregated, not individually fetched in full | Vendor/practitioner (search-corroborated) | Medium |
+| a16z retention-benchmarks post, Sequoia "Retention" article | WebSearch-aggregated | VC/investor practice writeup (search-corroborated) | Medium |
+| arXiv 2605.10223 (tiered AgentRunner), `Gamferno/agent-constitution`, MetaGPT/CAMEL writeups | WebSearch-aggregated | Framework/paper/repo (search-corroborated, checked and found not a full match) | Medium |
+| `.../ENGINEERING_LOG/registry.md`, `.../v1.7.2_2026-06-16.md`, `ARCHIVE/`, `PROJECT_SUMMARIES/`, `AI_Projects/*` | Not fetched this session | Primary artifact (unreached) | Unverified — not credited as evidence, honest gap on the Karpathy-citation premise |
+
+## Batch KIMI (2026-08-13) — Kimi/Moonshot AI: real strength/price, data policy, integration with Claude Code
+
+Brief from Engineer, relayed via `ENGINEER/OPEN_QUESTIONS.md`, 2026-08-13 entry. Full source-level detail and per-sub-question verdicts: `knowledge/evidence/2026-08-13-kimi-moonshot-verification.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — Kimi (Moonshot AI)" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| `platform.kimi.ai/docs/agreement/userprivacy` | Full page, fetched directly | Official privacy policy | High |
+| `platform.kimi.ai/docs/pricing`, `platform.kimi.ai/docs/guide/claude-code-kimi` | Full pages, fetched directly | Official docs | High |
+| `forum.moonshot.ai/t/kimi-k3-is-here-our-most-capable-model/480` | Full page, fetched directly | Official vendor announcement | High |
+| `openrouter.ai/moonshotai/kimi-k3`, `artificialanalysis.ai/models/comparisons/kimi-k2-6-vs-gemini-2-5-pro` | Full pages, fetched directly | Independent aggregator/benchmark | High |
+| `aihackers.net/risks/kimi/` + `/verify/kimi-claims/` | Full pages, fetched directly, checked for own cited evidence | Independent secondary (found to self-flag its own key claim as unverified) | Medium (useful as a negative check, not as confirming evidence) |
+| Wikipedia `Moonshot_AI` + SCMP profile of Yang Zhilin | Search-aggregated, cross-corroborating | Independent journalism/tertiary | Medium-High (two independent sources agree) |
+| `github.com/x51xxx/kimi-mcp-server` (README) | Full README, fetched directly | Repo doc (independent third-party MCP bridge) | High |
+| Gemini long-context pricing (apidog.com, devtk.ai, pricepertoken.com); SWE-Bench Pro comparative figures; K2.5/K2.6 pricing (DeepInfra, NxCode) | WebSearch-aggregated only | Secondary (search-corroborated) | Medium |
+| `techtimes.com` Moonshot funding/data-risk article | Fetch attempted, HTTP 403, not read | Unreached | Unverified — not credited as evidence |
+
 ## Summary
 
-- **Total distinct projects/sources touched**: ~97 (84 prior + 13 from Batch ROUTE).
+- **Total distinct projects/sources touched**: ~113 (104 prior + ~9 new source-groups from Batch KIMI).
 - **High confidence (full file/primary-artifact read, incl. Stage 2 direct re-verification)**: 16 — Anthropic Skills template, OpenCode Swarm, Kimi-code, Hermes, dsifry/metaswarm, agentic-ceo, plus 10 from Batch AIENG (Building Effective Agents, 12-Factor Agents, anthropics/skills spec, obra/superpowers, Letta v1 agent post, Claude API agent-design.md, Google MCP stateless post, Anthropic Building-Agents-with-Skills post, wshobson/agents, spec-kit).
 - **Medium**: ~47 — substantial structured excerpts or official docs, no full primary-artifact fetch.
 - **Low**: ~19 — single short snippet or secondary-sourced claim, not cross-checked.

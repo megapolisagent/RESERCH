@@ -1,0 +1,26 @@
+# Evidence log — Stage 0A, second object: workflows, issue-tracking, RFC practice, prompt version control
+
+Date: 2026-08-03. Continuing Stage 0A's second object, letters AA–EE.
+
+## AA — Declarative DAG planning
+Five independent agent-orchestration projects converge on the same shape: a Planner stage emits a dependency graph; a scheduler resolves parallel execution levels from it. Sources: ryofuu/agentflow, zeyad-azima/agentsbear, craftsman-labs/simpleagents, hexdag (PyPI page), and GittieLabs/agentflow (an archived commit) — all README-or-package-page depth only (Low confidence individually, but the convergence across five unrelated projects is itself the signal). The shared reasoning across sources: hand-written dependency wiring is repetitive and error-prone, and dependency resolution is mechanical enough to automate.
+
+## BB — "Fat engine, thin skill"
+hermes-multi-agent-workflow's `AGENTS.md` (fetched in full as part of the document-autopsy batch) states this as an explicit design principle: keep the orchestrator/engine domain-agnostic; push all domain-specific behavior into one config file a Skill (or template) wraps. The project treats leakage of domain logic into the engine layer as an active, named discipline to defend against, not a passive default.
+
+## CC — Structured knowledge curation from review comments
+dsifry/metaswarm's `knowledge-curator-agent.md` (near-full read) is the most concrete, production-shaped implementation of source-triangulation-as-a-numeric-rule found in this entire map: generalize a specific comment into a general fact, tag it with a confidence tier and full provenance (source, reference, date, author, context), deduplicate by similarity, and auto-upgrade confidence once ≥3 independent sources agree. Related sources at lower depth: terrylica/claude-code-skills-github-issues, mindmorass/reflex (`github-harvester/SKILL.md`), FacuM/yolo-agent (`knowledge-base-generator/SKILL.md`, near-full), and github/gh-aw's `discussion-task-miner.md` + PR #9428 — an automated mining of agent-generated output into an actionable, rate-limited, deduplicated backlog.
+
+## DD — RFC as a distinct pre-decision review stage
+Multiple sources (kieranpotts/rfc, bwnodak/eng-rfc, bytecodealliance/rfcs's full template file, plus blog articles from pandev-metrics.com, tech.attentive.com, and openclaw/rfcs) converge on treating an RFC as a review stage with its own status lifecycle (Draft → In Review → Changes Requested → Approved/Closed → Blocked/Discarded), kept explicitly separate from the ADR decision record itself. Named recurring failure modes across these sources: "pocket veto" (review stalls with no explicit decision, until the author gives up), "approval by silence" (no comments, auto-accepted, no one actually agreed), and "retrofit RFC" (code already written, the review is theater — the sources' own prescription is to call it an ADR instead, and not pretend it's still a decision process).
+
+**Transferable to AI_OS?** Finding 3 (writing forces specificity, independent of readership) is a strong, citable argument for why this skill's own inline rule provenance (the `Origin:`/`Evidence level:` notes in `PRINCIPLES.md`/`METHODOLOGY.md`) should keep requiring an explicit write-up even when no one else reviews a given entry before it's used. Finding 4 (named failure modes, esp. "retrofit RFC ≠ RFC, that's an ADR") is a sharp, reusable distinction for this project's own methodology-change process — currently `REVIEW_LOOP.md` already keeps Evidence Review and the v1.0 sign-off gate separate, but doesn't yet name a "pocket veto"-style failure mode for what happens if a v0.x→v1.0 gate stalls indefinitely — flagged, not resolved.
+
+## EE — Prompt/version control and eval-gated promotion
+Several small prompt-version-control projects examined (saurabhghatnekar/prompt-version-control, yedhuk/PromptTree, promptrepo and a duplicate, MukundaKatta/prompt-template-version, reaatech/prompt-version-control), mostly at Low-Medium confidence (README or package-page depth). The most substantive finding: reaatech/prompt-version-control implements eval-gated promotion — a prompt version cannot be promoted from staging to production unless it passes an evaluation harness first, tying Evaluation directly to versioning/Review rather than treating them as separate concerns.
+
+## CLAUDE.md hierarchy and production practice
+`ThalesGroup/fred/CLAUDE.md` (quoted near-full across two commits) plus four guide articles on CLAUDE.md hierarchy practice (parent/child inheritance capped at two levels, length budgets, single-source-of-truth auditing by a reader who is not the file's own author) — logged as pattern A, shared with the known-systems batch.
+
+## Summary
+This batch, together with the known-systems and obscure-repos batches, completes Stage 0A's second object. Synthesized into `CAPABILITY_MAP.md` primarily as Capabilities 2 (Planning), 6 (Learning), and 5 (Review), with cross-references into the Cross-capability observations section (evidence-must-travel-with-the-claim recurring across Memory, Learning, Evaluation, and Review independently). Reading depth is predominantly Low-Medium; three sources (hermes-multi-agent-workflow's `AGENTS.md`, dsifry/metaswarm's `knowledge-curator-agent.md`, and the CLAUDE.md production file) are High confidence — see `EVIDENCE_INDEX.md`.

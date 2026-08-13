@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "youtube-transcript": {
+      "command": "npx",
+      "args": ["-y", "@kimtaeyoon83/mcp-server-youtube-transcript"]
+    },
+    "reddit": {
+      "command": "uvx",
+      "args": ["reddit-no-auth-mcp-server"]
+    },
+    "arxiv": {
+      "command": "uvx",
+      "args": ["arxiv-mcp-server"]
+    },
+    "hackernews": {
+      "command": "uvx",
+      "args": ["--with", "mcp<2.0", "hn-mcp"]
+    }
+  }
+}

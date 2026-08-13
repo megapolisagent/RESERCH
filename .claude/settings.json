@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:obsidian.md)",
+      "WebFetch(domain:prakashjoshipax.com)",
+      "WebFetch(domain:www.moritzjung.dev)",
+      "WebFetch(domain:charts.phib.ro)",
+      "WebFetch(domain:platform.aibasis.ru)"
+    ]
+  }
+}

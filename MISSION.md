@@ -30,7 +30,7 @@ One Intelligence Report per target, in this order:
 - What changed recently
 - Sources
 
-No recommendations, no "you should" — intelligence only; the reader draws the conclusion.
+Researcher формулирует выводы о том, что подтверждает evidence: применимость, ограничения, trade-offs и обоснованность использования/адаптации/объединения/отложения/отказа. Researcher не принимает решений о приоритете, архитектуре, месте внедрения или распределении ресурсов. Эти решения принадлежат владельцу и/или Engineer.
 
 # Knowledge Growth
 

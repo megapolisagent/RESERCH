@@ -203,6 +203,8 @@ Brief from Engineer (second direct question, same day as Batch ORCH), re: a 4-la
 
 ## Batch EXECREC (2026-08-12) — observability/execution record for independently-living agents
 
+Full findings: `knowledge/evidence/2026-08-12-independent-agent-execution-record.md`.
+
 | Source | Depth | Type | Confidence |
 |---|---|---|---|
 | `platform.claude.com/docs/en/managed-agents/observability` + `/session-operations` | Full page, fetched directly, exact API methods extracted | Official Anthropic docs | High |
@@ -241,6 +243,19 @@ Brief from Engineer, relayed via `ENGINEER/OPEN_QUESTIONS.md`, 2026-08-13 entry.
 | `github.com/x51xxx/kimi-mcp-server` (README) | Full README, fetched directly | Repo doc (independent third-party MCP bridge) | High |
 | Gemini long-context pricing (apidog.com, devtk.ai, pricepertoken.com); SWE-Bench Pro comparative figures; K2.5/K2.6 pricing (DeepInfra, NxCode) | WebSearch-aggregated only | Secondary (search-corroborated) | Medium |
 | `techtimes.com` Moonshot funding/data-risk article | Fetch attempted, HTTP 403, not read | Unreached | Unverified — not credited as evidence |
+
+## Batch SYNC (2026-08-17) — cross-repo markdown/git status-sync patterns, no CI/no shared backend
+
+Brief from Engineer, direct call (narrow question, criterion pre-fixed per brief, relayed above the tool boundary rather than written to `OPEN_QUESTIONS.md` first). Prompted by a real found-and-fixed rassinhron between `ENGINEER`'s and this project's own decision-status records on the same question. Full source-level detail: `knowledge/evidence/2026-08-17-cross-repo-status-sync-patterns.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — Cross-Repo Status Sync (git/markdown, no CI)" section. Closed question record: `OPEN_QUESTIONS.md`, 2026-08-17 entry.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| Git submodule mechanism (`git-scm.com` general primitive) + `opensource.com`, `martinuke0.github.io` write-ups | WebSearch-aggregated, well-established primitive, not individually full-fetched | Official concept + secondary write-ups | Medium |
+| Michael Nygard's ADR pattern (status field, supersession) | Already logged Medium in Batch ORCH/SELF; reused, not re-fetched this session | Well-documented public standard | Medium |
+| Richards & Ford, *Fundamentals of Software Architecture* (cross-repo ADR centralization) | Quoted directly via `synchronium.github.io/software-architecture-wiki`, fetched directly this session | Secondary source quoting a named book | Medium (secondary quoting primary; book itself not directly read) |
+| shields.io official docs — dynamic endpoint badges | WebSearch-aggregated, official docs, not individually full-page-fetched | Official docs | Medium |
+| TC39 `proposals` repo central stage registry | Fetched directly (`README.md`, `how-we-work/README.md`) — sync mechanism between central registry and individual proposal repos **not confirmed**, dropped from findings | Official repo (mechanism unconfirmed) | Unverified — not credited as evidence |
+| `embeddedartistry.com` ADR-in-repo article | Fetched directly — did not address multi-repo scenario, dropped from findings | Independent blog (off-topic for this question) | Unverified — not credited as evidence |
 
 ## Summary
 

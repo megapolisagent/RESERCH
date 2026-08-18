@@ -257,12 +257,71 @@ Brief from Engineer, direct call (narrow question, criterion pre-fixed per brief
 | TC39 `proposals` repo central stage registry | Fetched directly (`README.md`, `how-we-work/README.md`) — sync mechanism between central registry and individual proposal repos **not confirmed**, dropped from findings | Official repo (mechanism unconfirmed) | Unverified — not credited as evidence |
 | `embeddedartistry.com` ADR-in-repo article | Fetched directly — did not address multi-repo scenario, dropped from findings | Independent blog (off-topic for this question) | Unverified — not credited as evidence |
 
+## Batch BIZPROD (2026-08-17) — "AI Business Producer" category: real business-analysis + specialist-agent-coordination systems
+
+task_id `ENG-2026-08-17-BIZPRODUCER-001`, World Research step inside Engineer's `idea-calibration` (Confidence Low). Full source-level detail: `knowledge/evidence/2026-08-17-ai-business-producer-systems.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — 'AI Business Producer' category" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| `api.github.com/repos/foundationagents/metagpt`, `.../OpenBMB/ChatDev` | Full API response, fetched directly | Primary (stars/activity/archived-status) | High |
+| `api.github.com/repos/ES7/AI-Software-Company-Simulator`, `.../vedanta/the-system`, `.../msoedov/mesa`, `.../Caoquyen1913/ai-outsourcing-studio` | Full API response, fetched directly | Primary (stars/activity) | High |
+| MetaGPT, ChatDev READMEs | Substantial excerpt via search, not individually full-fetched | Official repo README | Medium |
+| `goodhelp.ai` | Full page, fetched directly (`WebFetch`) | Official product page | High |
+| `aqen.ai`, `aqen.ai/product` | Substantial excerpt via search | Official product page | Medium |
+| `itsmeduncan.com/2026/05/05/the-builders-bet`, `linkedin.com/in/itsmeduncan` | Substantial excerpt via search | Founder's own blog/profile (level 4, self-report) | Medium |
+| `voraiq.com`, `/pricing`, `/agents`, `/live-metrics`, `/reviews` | Substantial excerpts via search, multiple pages | Official product pages | Medium |
+| `apprecs.com/ios/6736479518/vora-iq` | Substantial excerpt via search | Independent third-party App Store review aggregator | Medium |
+| `cofounder.co`, `cofounder.co/resources/introducing-cofounder-2` | Substantial excerpts via search | Official product page + founder blog post | Medium |
+| `usecarly.com/blog/cofounder-ai` | Substantial excerpt via search | Independent product teardown | Medium |
+| `currlyai.com/tool/cofounder-agentic-company-os`, `aitoolsclub.com/meet-cofounder...` | Substantial excerpts via search | Independent write-ups | Medium |
+| rootentity.com, startcaas.com, soleur.ai/agents, capibot.io, agentcorp.work, gforce.cloud, uuple.com, opscale.io, syzygia.io, incagent.ai, preplix.ai | Search-aggregated snippets only, not individually full-fetched | Official product pages (Tier 4/5 — mechanism claims recorded, usage not independently corroborated) | Low |
+| Academic venues for MetaGPT (ICLR 2024) / ChatDev (ACL 2024) | Claimed by each repo's own README, not independently re-verified via arXiv this session | Repo self-report of publication venue | Unverified — not credited beyond "claimed by the project itself" |
+| Reddit/Hacker News/Discord/YouTube for any candidate | Not investigated this session (time-boxed to fixed criterion) | — | Unverified — explicitly not investigated |
+
 ## Summary
 
-- **Total distinct projects/sources touched**: ~113 (104 prior + ~9 new source-groups from Batch KIMI).
-- **High confidence (full file/primary-artifact read, incl. Stage 2 direct re-verification)**: 16 — Anthropic Skills template, OpenCode Swarm, Kimi-code, Hermes, dsifry/metaswarm, agentic-ceo, plus 10 from Batch AIENG (Building Effective Agents, 12-Factor Agents, anthropics/skills spec, obra/superpowers, Letta v1 agent post, Claude API agent-design.md, Google MCP stateless post, Anthropic Building-Agents-with-Skills post, wshobson/agents, spec-kit).
-- **Medium**: ~47 — substantial structured excerpts or official docs, no full primary-artifact fetch.
-- **Low**: ~19 — single short snippet or secondary-sourced claim, not cross-checked.
-- **Unverified**: 1 category (system-prompt leak repositories — catalogued as a source class, not analyzed).
+- **Total distinct projects/sources touched**: ~132 (113 prior + ~19 new source-groups from Batch BIZPROD).
+- **High confidence (full file/primary-artifact read, incl. Stage 2 direct re-verification)**: 19 — Anthropic Skills template, OpenCode Swarm, Kimi-code, Hermes, dsifry/metaswarm, agentic-ceo, plus 10 from Batch AIENG (Building Effective Agents, 12-Factor Agents, anthropics/skills spec, obra/superpowers, Letta v1 agent post, Claude API agent-design.md, Google MCP stateless post, Anthropic Building-Agents-with-Skills post, wshobson/agents, spec-kit), plus 3 from Batch BIZPROD (MetaGPT/ChatDev GitHub API, 4-clone GitHub API, goodhelp.ai full fetch).
+- **Medium**: ~55 — substantial structured excerpts or official docs, no full primary-artifact fetch (+8 from Batch BIZPROD).
+- **Low**: ~30 — single short snippet or secondary-sourced claim, not cross-checked (+11 from Batch BIZPROD, the unfetched Tier 4/5 landing pages).
+- **Unverified**: 3 categories (system-prompt leak repositories; Batch BIZPROD's claimed academic venues for MetaGPT/ChatDev; Batch BIZPROD's not-investigated Reddit/HN/Discord/YouTube — each catalogued as a source class, not analyzed or credited as evidence).
 
 **Honest reading of this table**: the ratio of High to Medium/Low is small — 6 out of ~56. Most of the Capability Map (`CAPABILITY_MAP.md`) was built from Medium/Low-depth sources, which is exactly the gap flagged in the prior correction. The document-autopsy batch (`CASE`) is the first deliberate push toward High-confidence, full-document reading, and is explicitly a first installment, not a completed pass across the full evidence base. Where the Capability Map cites a Low-confidence project as an example of a mechanism, that citation should be read as "at least one signal of this pattern," not as a fully verified account of that project's actual practice.
+
+## Batch REALESTATE (2026-08-17) — "Agency-first, productize internal tooling second" in real estate/proptech
+
+task_id `ENG-2026-08-17-BIZPRODUCER-002`, direct call from Engineer, criterion fixed before search. Full source-level detail: `knowledge/evidence/2026-08-17-real-estate-agency-to-saas-pattern.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — 'Agency-first, productize internal tooling second' in real estate/proptech" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| Practical Founders podcast + article (MoxiWorks/York Baur) | Substantial excerpts via search | Independent podcast/case study | Medium |
+| GeekWire (MoxiWorks/Vector Capital funding) | Substantial excerpt via search | Independent tech press | Medium |
+| Vector Capital, MoxiWorks own site | Substantial excerpts via search | Company/investor self-report (level 4) | Medium |
+| Inman — Avenue 8/Sidekick (2024-06-10), Compass (2018-07-27, 2019-01-03), Anywhere retrospective (2025-10-02), Sequel (2018-10-03), Riley (2019-03-14), StackWrap, Rechat (2026-06-11), indie-brokerage panel (2022-04-21) | Substantial excerpts via search across 8 separate articles | Independent real-estate trade press | Medium |
+| Sidekick's own site, Michael Martin LinkedIn posts | Substantial excerpts via search | Company/founder self-report (level 4) | Medium |
+| RealTrends — Mainframe/ABE (2023-03-14), Bailey vs. Duffy build-vs-buy (2023-07-10) | Substantial excerpts via search | Independent real-estate trade press | Medium |
+| The Nassau Guardian — Rodland/RoRo (2026-04-17, 2026-07-27) | Substantial excerpts via search, 2 articles | Independent regional business press | Medium |
+| HousingWire — Rodland/RoRo interview (2026-05-22), The Real Brokerage/Leo 2.0 (2026-08-12) | Substantial excerpts via search | Independent real-estate trade press | Medium |
+| Jason Fried (Medium 2015, 37signals podcast, Basecamp About page, Signal v. Noise 2009, Inc. magazine) | Substantial excerpts via search, 5 independent venues | Primary/first-person, multi-venue | Medium-High (not individually full-fetched, but converging across 5 independent publications over a decade) |
+| NPR, Globe and Mail, Ottawa Business Journal, Shopify's own blog, rubyonrails.org 2005 (Shopify/Snowdevil) | Substantial excerpts via search, 5 sources | Independent press + primary contemporary post | Medium-High (same convergence logic as Basecamp) |
+| Crawlux/TG3 own blog and About pages | Substantial excerpts via search, 2 pages | Company self-report (level 4), no independent corroboration found | Medium |
+| Side Inc — TechCrunch, The Real Deal (2x), Camber Creek interview | Substantial excerpts via search, 4 sources | Independent tech/real-estate press | Medium |
+| Small 2025-2026 agency-ops-tool cluster (AgencyFlo, Rofinery, Supervisible, Wisdom, Tikr/Konabos, Hero Projects/Shape) | Substantial excerpts via search, 6 sources | Company self-report (level 4), no independent corroboration | Low |
+| Job postings — Kirpa Properties, P3 Properties, properti, ON Real Estate, Hogar Properties, Zenant, FutureStack AI, Areezo, TEO, Outcome/Sid Jain, Ledora | Substantial excerpts via search, ~11 postings/LinkedIn profiles | Primary hiring documents / founder self-report | Medium (primary for role-content claims; self-report for company-traction claims within the same postings) |
+| Vitally.io, Nobel Recruitment (generic SaaS CS-hiring benchmarks) | Substantial excerpts via search | Independent SaaS-industry research | Medium — explicitly flagged as not real-estate-specific |
+
+**Honest note on this batch**: no source above was a full primary-artifact fetch (no company's internal financials, cap table, or source code was reached — none was expected to be reachable for this class of target). Depth is capped at Medium by design: real-estate trade press (Inman, HousingWire, RealTrends) is treated as independent level-3 practitioner journalism per `METHODOLOGY.md`'s source hierarchy, not as a primary artifact, and is the highest tier actually reachable for this target. Two claims reached Confirmed only because 2+ independent outlets covered the same underlying fact independently (MoxiWorks' spin-out; Compass's and Riley's founder admissions, each reported by Inman and consistent with the companies' own subsequent public conduct).
+
+## Batch BIZCHAR (2026-08-17) — What separates professional from superficial business diagnosis: behavior, not knowledge
+
+task_id `ENG-2026-08-17-BIZPRODUCER-003`, direct call from Engineer, criterion fixed before search. Different layer from Batch BIZPROD/REALESTATE — not "what systems/companies exist" but "what character of work makes a business diagnosis professional," for `SOUL.md`/core Skill design. Full source-level detail: `knowledge/evidence/2026-08-17-professional-vs-superficial-business-diagnosis-character.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — Professional vs. superficial business diagnosis: behavioral character" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| McKinsey Podcast transcript, "How to master the seven-step problem-solving process" (Charles Conn, Hugo Sarrazin) | Full transcript fetched directly (Firecrawl, after 2 blocked `WebFetch` attempts) | Official first-party technical content | High |
+| Y Combinator Startup Playbook (`playbook.samaltman.com`) | Fetched and read directly | Official primary artifact | High |
+| The Mom Test (Rob Fitzpatrick) — via `sachinrekhi.com` full fetch + `mtlynch.io`/`blog.uxtweak.com` search-snippet corroboration | 1 full secondary fetch + 2 converging independent snippets; book itself not fetched | Independent practitioner summaries, 3-way convergent | Medium (Established mechanism, not primary-verified) |
+| The Trusted Advisor (Maister/Green/Galford) — via `trustedadvisor.com`, `nateliason.com`, `success-stacks.com` search snippets | Search snippets only, converging across 3 independent write-ups; book not fetched | Independent practitioner summaries, 3-way convergent | Low-Medium (Established mechanism, not primary-verified) |
+| AI-specific business-diagnosis-quality critique (searched, not credited) | Search only | Generic AI-hallucination content-marketing pages | Not used as evidence — explicitly named gap, see evidence file |
+
+**Honest note on this batch**: this is the first batch in this project where the two highest-confidence sources (McKinsey, YC) were both reached as full primary-artifact fetches on the first or second attempt — a rarer outcome than the Medium/Low-depth norm the "honest reading" note above this section already flags project-wide. The two supporting sources (Mom Test, Trusted Advisor) stayed at Established rather than Confirmed specifically because the primary books were not reached this session — flagged, not smoothed over. No AI-tool-specific source met the bar for use; the search category is recorded as investigated-but-not-credited, not silently skipped.

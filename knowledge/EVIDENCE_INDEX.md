@@ -325,3 +325,48 @@ task_id `ENG-2026-08-17-BIZPRODUCER-003`, direct call from Engineer, criterion f
 | AI-specific business-diagnosis-quality critique (searched, not credited) | Search only | Generic AI-hallucination content-marketing pages | Not used as evidence — explicitly named gap, see evidence file |
 
 **Honest note on this batch**: this is the first batch in this project where the two highest-confidence sources (McKinsey, YC) were both reached as full primary-artifact fetches on the first or second attempt — a rarer outcome than the Medium/Low-depth norm the "honest reading" note above this section already flags project-wide. The two supporting sources (Mom Test, Trusted Advisor) stayed at Established rather than Confirmed specifically because the primary books were not reached this session — flagged, not smoothed over. No AI-tool-specific source met the bar for use; the search category is recorded as investigated-but-not-credited, not silently skipped.
+
+## Batch AUTONOMY (2026-08-18) — Unattended/headless AI agent autonomy: sandboxing, non-interactive config, post-hoc audit
+
+Brief from Engineer, registered in `ENGINEER/OPEN_QUESTIONS.md` (2026-08-18 entry), criterion fixed before search. Three sub-questions, ≥2 real systems each. Full source-level detail: `knowledge/evidence/2026-08-18-unattended-headless-agent-autonomy.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — Unattended/headless agent autonomy" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| `code.claude.com/docs/en/sandbox-environments` | Full page, fetched directly | Official vendor docs | High |
+| `code.claude.com/docs/en/headless` | Full page, fetched directly | Official vendor docs | High |
+| `code.claude.com/docs/en/permission-modes` | Full page, fetched directly (persisted to file, read in full) | Official vendor docs | High |
+| `learn.chatgpt.com/docs/agent-approvals-security` (OpenAI Codex CLI, redirected from `developers.openai.com`) | Full page, fetched directly | Official vendor docs | High |
+| `microsoft.github.io/autogen/0.2/docs/topics/code-execution/cli-code-executor/` | Full page, fetched directly | Official vendor docs (Microsoft) | High |
+| `docs.github.com/en/copilot/concepts/agents/cloud-agent/risks-and-mitigations` | Full page, fetched directly | Official vendor docs | High |
+| `docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-cloudtrail.html` + sibling AgentCore CloudTrail pages | WebSearch-aggregated across several official pages, not one single full-fetch | Official vendor docs | Medium |
+| `docs.openhands.dev/openhands/usage/architecture/runtime` | WebSearch-aggregated substantial excerpt | Official vendor docs | Medium |
+| `raw.githubusercontent.com/openai/codex/main/docs/sandbox.md` | Fetched directly — page itself only pointed onward to the `learn.chatgpt.com` page above, contained no independent content; not credited beyond confirming the pointer | Official repo doc (redirect stub) | Unverified — not credited as independent evidence |
+| gVisor in an AI-agent-specific context | Searched, no primary source found tying gVisor specifically to agentic tooling | — | Unverified — explicitly not found, not forced into the report |
+| Cursor, CrewAI, Devin | Not investigated this session — saturation reached (P6) before these were needed to clear the fixed criterion | — | Unverified — explicitly not investigated, named as a gap |
+
+**Honest note on this batch**: unusually high ratio of full primary-artifact fetches (6 of 9 credited sources at High confidence) — the official Claude Code, OpenAI Codex, GitHub, and AutoGen documentation pages were each substantial and directly on-topic on first fetch, so the search did not need to fall back to secondary blog aggregation to clear the criterion. The two Medium-confidence sources (AWS AgentCore, OpenHands) were left at WebSearch-aggregated depth once saturation was reached for their respective sub-questions (P6) — flagged, not silently promoted to High.
+
+## Batch PRODROLE (2026-08-19) — Producer role (human/managerial practice): sequence, delegation, financial accountability without control
+
+task_id `ENG-2026-08-19-PRODUCERROLE-001`, direct call from Engineer, criterion fixed before search (`ENGINEER/OPEN_QUESTIONS.md`, 2026-08-19 entry). Human/managerial practice only — no AI product investigated in this batch, distinct from Batch BIZPROD/REALESTATE/BIZCHAR above. Full source-level detail: `knowledge/evidence/2026-08-19-producer-role-human-practice.md`. Synthesis: `knowledge/CAPABILITY_MAP.md`, "Refinement — Producer role (human/managerial practice)" section.
+
+| Source | Depth | Type | Confidence |
+|---|---|---|---|
+| `eosworldwide.com` (14 pages: Integrator, Accountability Chart, Scorecard, IDS, GWC, Level 10 Meeting, People Analyzer, FAQ, etc.) | Substantial excerpts via search, multiple pages, not individually full-fetched | Official methodology source (level 4 — subject describing its own product) | Medium |
+| `markcwinters.com` (2 pages, Rocket Fuel co-author) | Substantial excerpts via search | Official methodology source (co-author's own site) | Medium |
+| `integratorimpact.com` | Substantial excerpt via search | Independent EOS coach/implementer, not EOS Worldwide itself | Medium |
+| `coaches.scalingup.com`, `scalingup.com`, `therainmakergroupinc.com` (FACe PDF, Barriers chapter PDF) | Substantial excerpts via search, including a full PDF chapter | Official methodology source, independent company from EOS | Medium |
+| `sup.org` (Stanford University Press, *Riding Shotgun*) | Publisher page + excerpted preface, via search | Academic book, independent of both business-coaching methodologies | Medium |
+| `operationscouncil.org`, `robinson.gsu.edu`, `degruyterbrill.com` | Substantial excerpts via search | Independent summary + author's own faculty page (citation cross-check) + publisher TOC | Medium |
+| `producersguild.org/code-of-credits-feature-films` | Substantial excerpt via search | Industry-authority primary (Producers Guild of America's own credit definitions) | Medium-High |
+| `studiobinder.com`, `torontofilmschool.ca`, `indeed.com`, `geldards.com` | Substantial excerpts via search | Independent film-industry trade education / practitioner explainers | Medium |
+| `ipa.co.uk/knowledge/careers-in-advertising/...` | Substantial excerpt via search | Industry-authority primary (UK Institute of Practitioners in Advertising) | Medium-High |
+| `creedconsultingservices.com`, `wrapbook.com`, `storyflowe.com`, `a-p-a.net`, `creativeprojectmanagement.org` | Substantial excerpts via search | Independent practitioner accounts + a real posted job description | Medium |
+| `scholarship.law.vanderbilt.edu` (JETLaw), `digitalcommons.lmu.edu` (Loyola ELR), `troygould.com`, `iftn.ie` | Substantial excerpts via search | Legal scholarship / entertainment-law-firm practice notes | Medium |
+| `beta.bailii.org` — *Film Finance Inc v RBS* [2007] EWHC 195 | Substantial excerpt via search, quoting the actual completion-guaranty contract's operative text | Primary legal artifact (a real court judgment quoting a real contract) | High |
+| `21hats.com` (2 episodes), `friedmanpartners.com` | Substantial excerpts via search | Independent podcast/consultancy, named real business owners' first-person accounts | Medium |
+| `profit-strategies.com`, `calcalistech.com`, `monsterops.io` | Substantial excerpts via search | Independent critical book reviews / practitioner review (monsterops flagged as having a commercial interest in its own narrative, read with that in mind) | Medium |
+| Chief of Staff role, management-consulting engagement-manager/partner role | Not pursued once the criterion was already cleared with margin | — | Unverified — explicitly not investigated to depth, not "checked and rejected" |
+| Reddit/Hacker News/Discord/YouTube for any candidate | Not investigated this session (time-boxed to fixed criterion) | — | Unverified — explicitly not investigated |
+
+**Honest note on this batch**: no source reached full-page-fetch depth via `WebFetch` — every source was read through the search tool's own substantial page excerpts, capped at Medium confidence by design per this project's own confidence-vs-depth distinction, except the one primary legal judgment (bailii.org), which quoted enough of the actual contract text directly in the search excerpt to warrant High. This is a human-practice/management-literature target, not a codebase or product with a GitHub repository — the source-type mix (methodology sites, industry bodies, academic press, legal scholarship, independent podcasts) reflects the target, not a shortfall in method.

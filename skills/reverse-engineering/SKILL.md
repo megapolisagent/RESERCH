@@ -2,7 +2,7 @@
 name: reverse-engineering
 description: Реверс-инженерит реальную мировую практику для заданной цели (агент/система/продукт/компания/профессиональный домен/идея будущего агента) и превращает это в Intelligence Report с evidence — не мнение, не пересказ документации. Используй, когда нужно узнать, как что-то реально делается лучшими практиками в мире, для одной цели за раз.
 user-invocable: true
-allowed-tools: Read, Grep, Glob, WebFetch, WebSearch
+allowed-tools: Read, Grep, Glob, Write, WebSearch, mcp__firecrawl__firecrawl_scrape, mcp__firecrawl__firecrawl_search, mcp__exa__web_fetch_exa, mcp__exa__web_search_exa, mcp__youtube-transcript__get_transcript
 ---
 
 # Reverse Engineering

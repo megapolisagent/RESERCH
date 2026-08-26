@@ -369,4 +369,66 @@ task_id `ENG-2026-08-19-PRODUCERROLE-001`, direct call from Engineer, criterion 
 | Chief of Staff role, management-consulting engagement-manager/partner role | Not pursued once the criterion was already cleared with margin | — | Unverified — explicitly not investigated to depth, not "checked and rejected" |
 | Reddit/Hacker News/Discord/YouTube for any candidate | Not investigated this session (time-boxed to fixed criterion) | — | Unverified — explicitly not investigated |
 
+## Batch GAPMAP (2026-08-24) — Методика раскладывания компании на карту дефицитов: функции → роли → документы → клиенты → бренд, формат одного дефицита, ранжирование по срочности
+
+task_id `ENG-2026-08-24-GAPMAP-001`, прямой вызов от Engineer, критерий зафиксирован до поиска. Internal-context-first соблюдён переиспользованием (не пересчётом заново) записи «AI Business Producer» в `knowledge/MY_AGENTS.md` и её двух прежних cross-reference refinement. Полная детализация на уровне источников: `knowledge/evidence/2026-08-24-company-gap-mapping-methodology.md`. Синтез: `knowledge/CAPABILITY_MAP.md`, раздел «Refinement — Методика раскладывания компании на карту дефицитов».
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `rummlerbrache.com` (4 страницы: 3 Levels, Applying, Process Level, Nine Boxes) | Существенные выдержки через поиск, несколько страниц | Официальный источник методики (компания-создатель) | Medium-High |
+| `emyth.com` (5 страниц: systemize, document-a-system, operations-manual, small-business-model-prototype, management-system) | Существенные выдержки через поиск, несколько страниц | Официальный источник методики коучинга малого бизнеса | Medium |
+| `asq.org/quality-resources/sipoc` | Существенная выдержка через поиск | Отраслевой профессиональный орган (ASQ) | Medium-High |
+| `resources.rework.com`, `process.st`, `learnleansigma.com`, `sixsigmastudyguide.com`, `isixsigma.com` (SIPOC) | Существенные выдержки через поиск, 5 независимых описаний | Независимые гайды практиков/вендоров по SIPOC, все сходятся | Medium |
+| `supered.io/blog/process-map-template` | Существенная выдержка через поиск | Независимый блог по процессному консалтингу | Medium |
+| `moxo.com` (3 страницы: swimlane diagram, swimlane template, mapping-technique comparison) | Существенные выдержки через поиск | Вендор процессной оркестрации (прочитан ради механизма, не одобрен как инструмент) | Medium |
+| `sc.edu/.../swim_lane_map.php` | Существенная выдержка через поиск | Собственное официальное руководство по фасилитации Университета Южной Каролины — некоммерческий primary | Medium-High |
+| `asamby.com/process-map-swimlane` | Существенная выдержка через поиск | Независимый консалтинговый практик | Medium |
+| `iso.org` — PDF руководства Documented Information 2015 года | Существенная выдержка через поиск | Собственный официальный документ-руководство ISO | Medium-High |
+| `advisera.com`, `qualio.com`, `compliancequest.com`, `cdn1.qualitygurus.com` (инструменты gap-анализа/чек-листов ISO 9001) | Существенные выдержки через поиск | Независимые операционализации пункта ISO от вендоров комплаенса | Medium |
+| `internalauditor.theiia.org` (2 статьи: Five Attributes, Basics: Persuasive Results) | Существенные выдержки через поиск | Собственная публикация профессионального органа IIA | Medium-High |
+| `theiia.org` — PDF тулкита отчётности + PDF шаблона находки | Существенные выдержки через поиск | Собственный тулкит/шаблон IIA | Medium |
+| `relyence.com`, `accendoreliability.com`, `pqri.org`, `polarion.plm.automation.siemens.com`, `openregulatory.com` (FMEA/RPN) | Существенные выдержки через поиск, 5 источников | White paper названного автора + гайд отраслевого консорциума + white paper вендоров + шаблон для медицинских устройств, сходятся | Medium |
+| `icao.int` — PDF основ Safety Risk Management | Существенная выдержка через поиск | Собственное официальное руководство ICAO (кросс-отраслевой primary для риск-матрицы) | Medium-High |
+| `brandkernel.io`, `tdsdaas.one`, `phase2.io` (аудит бренда/точек контакта) | Существенные выдержки через поиск, 3 независимых источника | Независимые источники консалтинга по бренду/агентства, один (Phase2) документирует реальную внутреннюю практику | Medium |
+| `accelerate.citylifestyle.com`, `brand24.com` (аудит бренда, только подтверждающие) | Существенные выдержки через поиск | Менее весомые подтверждающие публикации, не несущие сами по себе | Low-Medium |
+| Единый названный продукт/платформа, покрывающий все пять узлов (организация+процесс+документ+клиент+бренд) в одном интегрированном аудите | Искалось, не найдено | — | Unverified — прямо не найдено, названо как пробел, не выдумано |
+| Специфичный для сектора недвижимости/агентств экземпляр любого фреймворка выше, применённый к реальному агентству, опубликованный | Искалось коротко, не найдено в рамках сессии | — | Unverified — прямо не исследовано вглубь, названо как реальный пробел в специфичности домена |
+
+**Честная заметка по этому батчу**: необычно высокая плотность конвергенции — каждый из пяти слоёв метода (Rummler-Brache, SIPOC, swimlane, документированная информация ISO 9001, аудит бренда) подтверждён 3+ независимыми источниками, и найдены незапрошенно два кросс-традиционных подтверждения (EMyth независимо подтверждает и логику пробела документации в §4, и основанную на Влиянии логику ранжирования в §7, без общего происхождения с семейством Six-Sigma/ISO/FMEA, используемым для остальной части метода). Ни одна отдельная первичная книга (собственная *Improving Performance* Rummler & Brache, *The E-Myth Revisited* Gerber) не была получена напрямую в этой сессии — обе методики прочитаны через собственные текущие сайты компаний-создателей, что Established, а не Confirmed-из-самой-книги; помечено, не сглажено в более сильный уровень, чем заслужено.
+
 **Honest note on this batch**: no source reached full-page-fetch depth via `WebFetch` — every source was read through the search tool's own substantial page excerpts, capped at Medium confidence by design per this project's own confidence-vs-depth distinction, except the one primary legal judgment (bailii.org), which quoted enough of the actual contract text directly in the search excerpt to warrant High. This is a human-practice/management-literature target, not a codebase or product with a GitHub repository — the source-type mix (methodology sites, industry bodies, academic press, legal scholarship, independent podcasts) reflects the target, not a shortfall in method.
+
+## Batch AGENTHOME (2026-08-25) — Файл роли агента: текущее состояние vs журнал решений, SSOT, глубина файлового дерева, ~20 реальных агентных архитектур
+
+task_id — прямой запрос Engineer (кросс-сессия, два сообщения, второе — жёсткий список из 20 репозиториев от владельца). Internal-context-first: реальные HOME.md/SOUL.md/DECISIONS.md агента «Юрист Мегаполиса», шаблон Foundation/04_REPOSITORY, `Skill System/skills/writing-for-agents/SKILL.md`. Внешний поиск — 7 параллельных форков. Синтез: `knowledge/CAPABILITY_MAP.md`, «Refinement — Файл роли агента (HOME.md/SOUL.md-класс)». Полный текст с цитатами передан Engineer напрямую в чат (`SendMessage`), не дублируется файлом здесь.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `code.claude.com/docs/en/memory` (Claude Code memory docs) | Полностью прочитан, WebFetch | Официальная документация Anthropic | High |
+| `anthropic.com/engineering/effective-context-engineering-for-ai-agents` | Полностью прочитан, WebFetch | Официальный инженерный блог Anthropic | High |
+| `anthropic.com/constitution` | Полностью прочитан, WebFetch, прямые цитаты | Официальный первичный документ Anthropic | High |
+| `github.com/anthropics/skills` + `agentskills.io/specification` | Полностью прочитан | Официальная спецификация | High |
+| `openai.github.io/openai-agents-python/agents/` | Прочитан | Официальная документация OpenAI | High |
+| `github.com/openai/swarm` README | Полностью прочитан | Первичный код + официальный README | High |
+| `docs.crewai.com` + GitHub `crewAIInc/crewAI` | Прочитан | Официальная документация + код | High |
+| `microsoft.github.io/autogen` + GitHub | Прочитан | Официальная документация Microsoft + код | High |
+| `github.com/geekan/MetaGPT` `role.py` | Прямой листинг кода | Первичный код | High |
+| `docs.langchain.com/oss/python/concepts/memory` | Прочитан | Официальная документация | High |
+| `github.com/Significant-Gravitas/AutoGPT` (classic + текущий master) | Прямой fetch файлов/README | Первичный код | High |
+| `github.com/yoheinakajima/babyagi_archive/babyagi.py` | Прямой fetch, полный файл | Первичный код | High |
+| `github.com/TransformerOptimus/SuperAGI` | Прямой листинг директории | Первичный код | High |
+| `raw.githubusercontent.com/OpenHands/OpenHands/main/AGENTS.md` | Прямой fetch, полный файл | Первичный артефакт | High |
+| `docs.letta.com/concepts/memory-management` + `arxiv.org/pdf/2606.15903` | Прочитан + независимое подтверждение | Официальная документация + academic | High |
+| `langfuse.com/docs/prompt-management` | Прочитан | Официальная документация | High |
+| `github.com/langgenius/dify` + `legacy-docs.dify.ai` | Прочитан | Официальная документация + код | High |
+| `coze-dev/coze-studio` | Прочитан частично | Открытый код, но файловая схема роли не найдена | Medium — [УТОЧНИТЬ] по конкретному вопросу |
+| `docs.flowiseai.com` | Прочитан | Официальная документация | High |
+| Aider `deepwiki.com/Aider-AI/aider` | Прочитан | Secondary-агрегатор, но конкретные цифры (200 строк) подтверждены | Medium-High |
+| `docs.mem0.ai/core-concepts/memory-types` | Прочитан, прямая цитата | Официальная документация | High |
+| `docs.litellm.ai/docs/proxy/configs` | Прочитан, прямая цитата | Официальная документация | High |
+| `chroma-core/chroma`, `e2b-dev/E2B` | Не фетчены напрямую, вторичная агрегация | Secondary | Medium — честный пробел |
+| Google DeepMind agent architecture | Искалось, не найден подходящий первичный источник | — | Unverified — [УТОЧНИТЬ], не найдено |
+| `run-llama/llama_index` | Только вторичные описания (Medium/geeksforgeeks) | Secondary | Medium — [УТОЧНИТЬ], primary не фетчен |
+| Аналог US UPL-регуляторики (unauthorized practice of law) в РФ | Не проверялось, вне рамок поиска | — | Unverified — [УТОЧНИТЬ], честно названо |
+
+**Честная заметка по этому батчу**: очень высокая конвергенция (9+ независимых primary-источников) на разделении «роль = статичное текущее состояние, память/история = отдельный объект» — но найден реальный, не сглаженный контр-пример (`OpenHands/OpenHands`'s собственный `AGENTS.md`, primary-артефакт), и разница объяснена структурно (дублирование vs единственный источник), не проигнорирована. Большинство источников — runtime SDK-фреймворки, решающие другую задачу, чем персистентный человеко-читаемый «дом агента» Foundation — сравнение по глубине дерева файлов направленно верное, но честно помечено как не строго яблоки-к-яблокам.

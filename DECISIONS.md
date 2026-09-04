@@ -39,6 +39,17 @@ Proposal → Discussion → Locked
 
 ## Журнал
 
+### 2026-09-04 — Подключён `last30days-skill` из библиотеки (Capability Gap Gate)
+
+Статус: Locked (владелец: «да подтверждаю» на предложенную таблицу)
+Что решается: Инженер прогнала Capability Gap Gate по итогам аудита Кодекса 15 скиллов —
+`last30days-skill` (свежий сигнал за 30 дней: Reddit/X/YouTube/TikTok/HN/Polymarket/GitHub)
+прямо попадает в задачу «сбор сигнала YouTube/Telegram», подключён сюда, не Маркетологу —
+исследование остаётся её зоной (`ROUTING.md`).
+Честно: базовый уровень (Reddit/HN/Polymarket/GitHub) работает без ключей; YouTube/X/TikTok
+требуют API-ключ владельца — не тестировался в этой сессии, только установлен.
+Источник: `ENGINEER/DECISIONS.md`, 2026-09-04.
+
 ### 2026-08-29 — Capability Resolver дошёл до AI Intelligence, ссылка в HOME.md
 
 Статус: Locked (владелец, «это правило для всех агентов, которые могут использовать Telegram... приведите их к единому стандарту»)

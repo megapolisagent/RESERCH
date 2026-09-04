@@ -432,3 +432,135 @@ task_id — прямой запрос Engineer (кросс-сессия, два 
 | Аналог US UPL-регуляторики (unauthorized practice of law) в РФ | Не проверялось, вне рамок поиска | — | Unverified — [УТОЧНИТЬ], честно названо |
 
 **Честная заметка по этому батчу**: очень высокая конвергенция (9+ независимых primary-источников) на разделении «роль = статичное текущее состояние, память/история = отдельный объект» — но найден реальный, не сглаженный контр-пример (`OpenHands/OpenHands`'s собственный `AGENTS.md`, primary-артефакт), и разница объяснена структурно (дублирование vs единственный источник), не проигнорирована. Большинство источников — runtime SDK-фреймворки, решающие другую задачу, чем персистентный человеко-читаемый «дом агента» Foundation — сравнение по глубине дерева файлов направленно верное, но честно помечено как не строго яблоки-к-яблокам.
+
+## Batch AVITODATA (2026-08-31) — Легальные каналы данных о конкурентах на Авито (агентство «Мегаполис», новостройки бизнес-класс Москва)
+
+task_id — прямой узкий бриф Engineer, критерий зафиксирован до поиска (`research-brief-template.md`). Три подпункта: (а) официальный партнёрский канал/API Авито к чужим объявлениям, (б) легальные коммерческие сервисы-посредники с партнёрским (не парсинговым) доступом, (в) реальная практика агентств Москвы. Полная детализация с прямыми цитатами: `knowledge/evidence/2026-08-31-avito-competitor-data-legal-channels.md`.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `habr.com/ru/companies/click/news/1004462` (Avito Pro API) | Полный fetch | Secondary, republish пресс-релиза Авито | Medium |
+| `cnews.ru`, `sostav.ru`, `iguides.ru` (то же обновление API) | Snippet через поиск | Republish того же пресс-релиза, не независимо | Low |
+| `mango-office.ru`, `insales.ru` (тарифы «Авито Аналитика» Недвижимость) | Snippet через поиск | Независимые практик-гайды | Medium |
+| `ads-api.ru` | Полный fetch | Собственная страница коммерческого парсера | High (для факта «это парсинг») |
+| `vc.ru/marketing/3072957-analiz-konkurentov-na-avito` | Полный fetch | Маркетинговый блог | Medium |
+| `likestats.io/landing-avito` | Полный fetch | Собственная страница вендора | High (для факта «источник не раскрыт») |
+| `smartagent.ru` (мониторинг объявлений) | Полный fetch | Собственная страница вендора CRM | High (для факта агрегации) |
+| `joywork.ru`, `dtf.ru` топ-17 CRM | Snippet через поиск | Отраслевой обзор + вендор | Medium |
+| `docs.bnmap.pro` | Полный fetch, прямая цитата источников данных | Официальная документация продукта | High |
+| `bnmap.pro` (главная) | Полный fetch | Официальная страница продукта | Medium |
+| `наш.дом.рф` прямой fetch | Заблокировано, 403 бот-защита | — | Unreachable |
+| `gusn.mosreg.ru`, `stroygaz.ru`, `srobop.ru` (ЕИСЖС/наш.дом.рф) | Snippet, 3 независимых | Госорган + отраслевые СМИ | Medium |
+| `cian.ru/analiz-rynka-nedvizhimosti-b2b/` прямой fetch | Заблокировано, капча Яндекса | — | Unreachable |
+| `proptech.digitaldeveloper.ru/solutions/cian-analitika` | Полный fetch | Независимый proptech-каталог | Medium |
+| `info.plex-lab.ru` (API-ключи Авито в CRM) | Fetch не удался, DNS | — | Unreachable |
+
+**Честная заметка по этому батчу**: (а) и специфично-Авито-часть (б) — отрицательный результат, полученный полным набором источников, не молчанием: официальный API Авито и платная «Авито Аналитика» реально существуют, но оба про управление/защиту **своих** объявлений, не про доступ к чужим; ни один найденный коммерческий парсер-сервис не заявляет партнёрский (не парсинговый) доступ к Авито. Сильная положительная находка лежит рядом, не в лоб на вопрос: для сегмента новостроек (сегмент этого агентства) официальные, полностью легальные источники цен застройщика существуют и подтверждены дважды независимо на разных типах источников (bnMAP.pro — коммерческий продукт с прямой цитатой источников данных; наш.дом.рф — государственный реестр, законодательно обязательный для застройщиков) — P3-триангуляция на одном и том же классе первичных данных (проектная декларация + официальный прайс-лист), не на самих Avito-объявлениях конкурентов. Оба primary-домена (наш.дом.рф, cian.ru) отдали бот-защиту при прямом fetch — тот же класс проблемы, что Engineer уже зафиксировал для самого Авито, независимо подтверждённый здесь на двух дополнительных доменах.
+
+## Batch OPENCLAW (2026-08-31) — Механизм OpenClaw (Gateway/ClawHub/SOUL.md/Browser Skill) и применимость к автономному сбору данных застройщиков/классифайдов
+
+task_id — прямой узкий бриф Engineer, критерий зафиксирован до поиска (`research-brief-template.md`). Проверка ориентировки Engineer (Gateway/heartbeat/ClawHub/SOUL.md/Browser Skill/Node/Windows-WSL2/Ollama/cron/юридический риск ToS классифайдов) против первоисточника. Полная детализация с прямыми цитатами: `knowledge/evidence/2026-08-31-openclaw-mechanism-and-applicability.md`.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `github.com/openclaw/openclaw` (README) | Полный fetch | Primary, репозиторий | High |
+| `docs.openclaw.ai/gateway`, `/gateway/heartbeat`, `/reference/templates/HEARTBEAT` | Полный fetch | Официальная документация | High |
+| `github.com/openclaw/openclaw/pull/112967` (heartbeat scratch migration) | Полный fetch | Primary, merge-описание PR | High |
+| `docs.openclaw.ai/clawhub*`, `/tools/skills` | Полный fetch | Официальная документация | High |
+| `docs.openclaw.ai/reference/templates/SOUL`, `/concepts/agent`, `/concepts/system-prompt` | Полный fetch | Официальная документация | High |
+| `docs.openclaw.ai/tools/browser*`, `extensions/browser/skills/browser-automation/SKILL.md` | Полный fetch | Официальная документация + primary SKILL.md | High |
+| `docs.openclaw.ai/install/*` | Полный fetch | Официальная документация | High |
+| `github.com/openclaw/openclaw/issues/24784` (execution policy) + `scripts/install.ps1` | Полный fetch | Primary, issue + исходный код | High |
+| `blogs.windows.com/windowsdeveloper/...` (Pavan Davuluri, MXC) | Полный fetch | Официальный вендорский блог | High |
+| `theverge.com/...` | Snippet | Независимая пресса | Medium |
+| Build 2026 keynote (YouTube) | Транскрипт через поиск, не просмотрено напрямую | Первичная демонстрация | Medium |
+| `docs.openclaw.ai/platforms/windows` | Полный fetch | Официальная документация | High |
+| `github.com/openclaw/openclaw/issues/91144, 128593, 90158, 41804, 68791` (нативный Windows Gateway) | Полный fetch каждого | Primary, issues | High |
+| `docs.openclaw.ai/providers/ollama`, `/concepts/model-providers` | Полный fetch | Официальная документация | High |
+| `github.com/openclaw/openclaw/issues/24068` (Ollama context window) | Полный fetch | Primary, issue + фикс-PR | High |
+| `docs.openclaw.ai/automation/cron-jobs`, `/cli/cron` + `register.cron-add.ts` | Полный fetch | Официальная документация + исходный код | High |
+| `openclaw.direct/acceptable-use`, `/terms` | Полный fetch | Primary, юридический документ официального хостинга | High |
+| `openclawplaybook.ai/...browser-automation-guide` | Snippet | Secondary, практическое руководство | Medium |
+
+## Batch LOCOCARD (2026-08-31) — Карточка-локомотив для новостройки бизнес-класса на Авито
+
+task_id — прямой узкий бриф Engineer, критерий зафиксирован до поиска (`research-brief-template.md`). 4 части: заголовок/SEO, первый экран текста, визуальный крючок на обложке, CTA/лид-магнит. Полная детализация с прямыми цитатами: `knowledge/evidence/2026-08-31-avito-locomotive-card-business-class-newbuild.md`.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `vc.ru/marketing/1369932-...` (WannaFly, кейс Барнаул) | Полный fetch | Практик-кейс с цифрами, именной автор | High |
+| `workspace.ru/cases/bolshoy-keys-po-avito-...` (ConvertMe) | Полный fetch | Практик-кейс с бюджетом и CPL | High |
+| `workspace.ru/blog/zagolovok-na-avito-formula-...` | Полный fetch | Агентский блог | Medium |
+| `t-j.ru/avito-text-and-pics/` | Полный fetch | Редакционный материал (Т-Ж) | Medium |
+| `vc.ru/marketing/1928148-...` (LiteLab Agency) | Полный fetch | Агентский блог | Medium |
+| `vc.ru/marketing/1042007-...` | Полный fetch | Анонимная статья | Low |
+| `elama.ru/blog/kak-sostavit-...` (eLama) | Полный fetch | Агентский блог | Medium |
+| `m.vk.ru/@design_thinking_biz-...` | Полный fetch | Обезличенный паблик, коммерческий | Low |
+| `service-a5client.ru/.../trebovaniya-k-obyavleniyam-v-kategorii-nedvizhimost/` | Snippet | Зеркало официальных требований Авито | Medium |
+| `support.avito.ru` | Fetch не удался (домен недоступен для WebFetch) | — | Unreachable |
+| `brokerless.com/mls-photo-rules` | Полный fetch | Отраслевой практик-гайд (MLS, США) | Medium |
+| `zillow.com`/`homerise.com` (фото-требования Zillow) | Snippet | Официальные/практик-источники США | Medium |
+| Сайты застройщиков (etalongroup.ru, level.ru, fsk.ru) — «Рассрочка 0%» | Snippet | Собственные страницы застройщиков | Low |
+
+## Batch COPYWRITE (2026-09-01) — Реальный продающий копирайтинг + технический механизм «очеловечивания» у AI-систем
+
+task_id — прямой узкий бриф Engineer, критерий зафиксирован до поиска. Проверка гипотезы «текстовые правила стиля в SKILL.md Авитолога» против реальной практики копирайтинга и реальных AI-копирайтинговых систем. Полная детализация с прямыми цитатами: `knowledge/evidence/2026-09-01-avitolog-copywriting-humanization-mechanism.md`.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `copyhackers.com/2015/10/copywriting-formula`, `/2023/03/attention-interest-desire-action` (Joanna Wiebe) | Structured excerpt | Практик, именной автор | Medium |
+| `robpalmer.com/blog/copywriting-formulas` | Structured excerpt | Практик, именной автор (заявление $523M не проверено) | Medium |
+| `crazyegg.com/blog/aida-vs-pas` | Structured excerpt | Практик-блог | Medium |
+| `conversion.studio/blog/aida-vs-pas-copywriting-framework` | Structured excerpt | Маркетинговый блог AI-инструмента, цифры без прямых ссылок на первоисточник | Low |
+| `copynotebook.com/...swipe-files...`, `john-carlton.com/2020/...halbert`, `copywritematters.com/hand-copied-sales-messages`, `swipefile.com/gary-halbert-on-direct-mail` | Structured excerpt каждый | Практик-блоги, независимая корроборация практики | Medium |
+| `insightios.com/blog/voc-research-landing-pages`, `b2bmention.com/blog/voice-of-customer-copywriting`, `brevvi.ai/blog/voice-of-customer-research`, `conversion.studio/blog/voice-of-customer-research`, `rawneed.com/guides/voice-of-customer-research` | Structured excerpt каждый | Практик/агентские блоги, кейсы Copyhackers цитируются вторично | Medium |
+| `persado.com/articles/how-persado-harnesses-specialized-language-models-for-marketing`, `/generative-ai-for-text`, `/generative-ai-and-personalization`, white paper PDF «5 Capabilities» | Structured excerpt каждый | Вендорские технические статьи (не независимый аудит) | Medium |
+| `govtech.com`, `bloomberg.com`, `marketingdive.com`, `sfgate.com` (JPMorgan×Persado, 2019) | Structured excerpt каждый, 4 независимых издания | Независимая пресса, цитирует клиента (JPMorgan CMO), не только вендора | Medium-High |
+| `support.anyword.com/what-is-the-predictive-performance-score`, `/introduction-to-benchmarking`, `/understanding-the-insights-panel-in-anyword`, `anyword.com/data-driven-editor` (полный fetch), `anyword.com/blog/*` | Structured excerpt + 1 полный fetch | Официальная документация + вендорский сайт | Medium |
+| `help.jasper.ai/hc/en-us/articles/...Brand-Voice`, `.../Jasper-IQ`, `jasper.ai/blog/introducing-brand-voice`, `jasper.ai/brand-voice` | Structured excerpt каждый | Официальная документация + официальный блог | Medium |
+| `latechpost.com/jasper-ai-brand-voice-feature`, `/does-jasper-have-a-feature-to-save-brand-guidelines` | Structured excerpt | Независимый технический разбор, согласуется с официальной документацией | Medium |
+| `github.com/robpalmer99/claude-code-copywriting-skills/direct-response-copy/SKILL.md`, `/copychief/SKILL.md` | **Полный fetch, первичный артефакт** | Repo, публичный SKILL.md | High |
+| `robpalmer.com/blog/claude-code-direct-response-copy-skill`, `/claude-code-copychief-skill`, `/claude-code-copywriting-skills`, `/claude-code-landing-page-copy-skill`, `/triple-brain-marketing` | Structured excerpt каждый | Практик-блог, включая непроверяемое личное заявление (Obsidian-корпус) | Medium/Low (по заявлению) |
+| `zillow.com/research/*` (2016, 2018, 2023, 2024, 2026 отчёты) | Structured excerpt каждый | Официальные исследования Zillow, методология описана (множественная регрессия) | Medium-High |
+| `listinghub.ai/blog/how-to-write-better-zillow-descriptions-with-ai`, `the-agent-advantage.com/zillow-x-chatgpt`, `coursiv.io/blog/chatgpt-for-real-estate-agents-2026`, `metes.app/learn/writing-for-zillow-2026`, `mindstudio.ai/blog/ai-real-estate-marketing-flyers-listings`, `simplelistings.co/free-tools/description-generator` | Structured excerpt каждый | Практик-блоги/продуктовые страницы real estate AI-инструментов | Medium |
+
+**Честная заметка по этому батчу**: сильнейшая находка — не подтверждение, а **опровержение части ориентировки Engineer**: heartbeat больше не читает `HEARTBEAT.md` (мигрировал на SQLite cron-scratch, два независимых primary-источника), что для задачи «автономный сборщик» технически меняет, как настраивать периодичность. Второе по значимости — нативный Windows одновременно **и** официально поддержан Microsoft с 2026-06 (MXC, 3 независимых типа источника), **и** имеет действующие открытые issues именно по фоновой службе Gateway на дату проверки (самый свежий — за неделю до этой сессии) — обе половины факта подтверждены, не сглажены в одну сторону. Третье — юридический риск усилен новой, не ожидавшейся находкой: собственная Acceptable Use Policy хостинга OpenClaw прямо запрещает ровно тот сценарий, который проверялся.
+
+## Batch TRAFFIC (2026-09-01) — Эталон профессии «специалист по ставкам/платному трафику на классифайдах» (для агента «Трафик-менеджер»)
+
+task_id — прямой узкий бриф Engineer, критерий зафиксирован до поиска (`research-brief-template.md`), запрошен **до** написания `SOUL.md`/Skills нового агента. 5 частей: (1) как реально принимается решение по ставке/бюджету, (2) механизм защиты от фрода/спам-звонков, (3) «советник vs исполнитель» в реальной практике, (4) что переносится/что требует инфраструктуры, (5) граница Craft/Engineering. Полная детализация с прямыми цитатами: `knowledge/evidence/2026-09-01-traffic-manager-bidding-role.md`.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `avito.ru/legal/rules/paid_services/cost-per-action` | Structured excerpt, прямая цитата пп. 2.6-2.9 | Официальный юридический документ Avito | High (primary) |
+| `ads-help.avito.com/group/auction`, `/group/bidding`, `/account/refund` | Structured excerpt | Официальная документация Avito Ads | High (primary) |
+| `github.com/elchin92/avito-mcp` (README) | Полный fetch | Primary, open-source репозиторий | High (существование инструмента; счётчики — самозаявлены) |
+| `habr.com/ru/articles/1074268/` (andrey_rybakov, 235 кампаний WB) | Structured excerpt | Независимый практик, разбор собственных данных | Medium-High |
+| `adindex.ru/case/2026/03/5/342865.phtml` (ConvertMe), `elama.ru/blog/celevye-lidy-iz-avito-reklamy...` («Нордик») | Structured excerpt каждый | Именные агентские кейсы с цифрами | Medium |
+| `kapadastr.ru` (2 статьи), `mpmgr.ru/blog/ads-promotion/audit-reklamy-drr-wildberries`, `dipustovalov.ru`, `vyaznikov.com`, `magnetto.pro` (2 статьи) | Structured excerpt | Практик-гайды (Ozon/WB) | Medium |
+| `savvyrevenue.com` (2 статьи, Andrew Lolk), `sagum.com`, `sink-or-swim-marketing.com` | Structured excerpt | Именной практик + отраслевые гайды (Google Ads каденция) | Medium |
+| `blog.promopult.ru/ppc/kak-rabotaet-antifrod-v-yandeks-direkte.html` | Structured excerpt | Независимый разбор официального механизма Яндекса | Medium |
+| `adsafee.com/blog/ru/antifrod-dlya-arbitrazha-trafika/`, `calltouch.ru/blog/kak-ne-tratit-reklamnyj-byudzhet...` | Structured excerpt | Вендорские гайды (антифрод-сервисы) | Medium |
+| `agentplanners.com` (2), `syntermedia.ai`, `battlebridge.com`, `ad3535.com`, `displaying.cloud`, `digitalapplied.com`, `wevion.ai` | Structured excerpt | Вендорские/инженерные блоги (AI ad-agent HITL-дизайн, 2026) | Medium (digitalapplied — Medium-High, привязка к реальным Google Ads API-сервисам) |
+| `influencers-time.com/google-ask-ad-manager-at-one-year-humans-still-approve/` | Structured excerpt, прямая цитата | Независимый технический разбор (издание не проверено) | Medium |
+| `dreamjob.ru`, `career.hh.ru/profession/126`, `practicum.yandex.ru`, `jobs.traff.ink`, `ru.joobsi.com`, `hirify.me` | Structured excerpt | Реальные вакансии/должностные инструкции/карьерные обзоры | Medium |
+
+**Честная заметка по этому батчу**: главная находка — не сглаженный вывод, а зафиксированное расхождение между двумя слоями практики. «Советник, не исполнитель» **не подтверждается** как норма реальной человеческой профессии «трафик-менеджер» в России (5 проверенных вакансий/инструкций показывают обратное — прямую исполнительскую власть специалиста), но **сильно подтверждается** как формирующийся 2026 года стандарт именно для дизайна AI-агентов с доступом к живому рекламному бюджету (Google Ask Ad Manager, BattleBridge Recommend Mode, инженерный гайд digitalapplied.com). Вторая по значимости находка: то, от чего владелец отказался (агент сам исполняет через API), уже реализовано как рабочий open-source инструмент (`avito-mcp`) — отказ является осознанным выбором риска, не следствием недоступности технологии. Третья: официальные Правила Avito делают «автоматическое опротестование» технически ограниченным понятием — финальное решение по звонку всегда принимает человек на стороне Avito, не рекламодатель и не его агент.
+
+## Batch LEGALDATA (2026-09-04) — Легальные способы получить рыночные/конкурентные данные Avito (не самостоятельный скрейпинг)
+
+task_id — прямой узкий бриф Engineer, вызов через `OPEN_QUESTIONS.md` (запись 2026-09-04), критерий зафиксирован до поиска. 4 части: (1) официальный аналитический продукт Avito для бизнес-аккаунтов, (2) легальные лицензированные поставщики/агрегаторы, (3) прямой технически честный тест единичного запроса через `WebFetch`/`firecrawl`/`exa`/`curl`, (4) именованные реальные компании и их раскрытый метод. Полная детализация с прямыми цитатами и полным HTTP-логом эксперимента: `knowledge/evidence/2026-09-04-avito-market-data-legal-channels-vs-scraping.md`.
+
+| Источник | Глубина | Тип | Доверие |
+|---|---|---|---|
+| `likestats.io/blog/analiz-konkurentov-na-avito` | Полный fetch | Independent practitioner write-up | High |
+| `vc.ru/marketing/3072957-analiz-konkurentov-na-avito` | Полный fetch | Маркетинговый блог | Medium |
+| `www.avito.ru/moskva/kvartiry/prodam-zastroyshchik` — прямой `curl`-эксперимент, 2 запроса с полными заголовками | Полный, воспроизведённый в сессии сетевой запрос | Primary — прямое наблюдение поведения сервера (QRATOR) | High |
+| `github.com/MissiaL/avito-api` (README, Business API методы) | Snippet через `WebSearch` | Independent, третья сторона | Medium |
+| `metrium.ru/research/` | `WebSearch`-синтез собственной страницы | Официальная страница компании | Medium |
+| `irn.ru` («ручной сбор» данных о новостройках) | `WebSearch`-синтез, прямой fetch `irn.ru/zastroyschiki/` вернул 410 Gone | Secondary, не перепроверено напрямую | Medium, честно понижено с потенциального Confirmed |
+| `developers.avito.ru/api-catalog` | Заблокировано `WebFetch` на уровне инструмента (не сервера Avito) | — | Unreachable — честно названо |
+| `mcp__exa__web_search_exa`/`web_fetch_exa`, `mcp__firecrawl__firecrawl_scrape`/`firecrawl_search` | Ошибка 401 (невалидный ключ/токен), весь сеанс | — | Unreachable — техническая поломка конфигурации дома, названа Engineer, не решена в рамках сессии |
+| `knowledge/evidence/2026-08-31-avito-competitor-data-legal-channels.md`, `2026-08-31-openclaw-mechanism-and-applicability.md` | Reused (тот же дом) | Internal, primary-цитаты внутри | High, Reused, не re-verified |
+
+**Честная заметка по этому батчу**: главная новая находка — прямой воспроизведённый технический эксперимент (не предположение) показал, что различие «единичный запрос vs автоматический» реально, но не абсолютно: первый же запрос без правильных заголовков browser-like получил `HTTP 429` + капчу от QRATOR, второй запрос тем же IP через 5 секунд с более полными заголовками получил чистый `HTTP 200` с реальным HTML — то есть техническая защита реагирует на признаки автоматизации, а не на факт повторного обращения как таковой. Вторая находка: встроенная официальная «Аналитика спроса» Avito (тариф «Расширенный»/«Максимальный») даёт легальную видимость числа конкурентов и разброса цен по запросу — ближе к цели брифа, чем ранее найденный ограниченный Pro API. Третья: именованные реальные компании сегмента новостроек (IRN.RU, Метриум), которые честно раскрывают метод, называют **ручной** сбор силами штата аналитиков — ни один публично раскрывающий метод источник не подтвердил автоматический обход защиты Avito как свою практику.
